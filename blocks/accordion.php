@@ -8,7 +8,7 @@
   <div class="card">
 
     <div class="card-header" id="heading-<?php echo get_row_index(); ?>">
-      <h2 class="mb-0">
+      <h2 class="my-0">
         <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapse-<?php echo get_row_index(); ?>" aria-expanded="true" aria-controls="collapse-<?php echo get_row_index(); ?>">
         <?php echo $fold_title; ?>
         </button>

@@ -9,19 +9,17 @@ function enqueue_parent_styles() {
 add_action( 'wp_enqueue_scripts', 'enqueue_parent_styles' );
 
 /**
- * Enqueues Bootstrap on the frontend.
+ * Enqueues Bootstrap on the frontend and in the block editor.
  */
 function enqueue_bootstrap() {
-    wp_enqueue_style('bootstrap4', 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css');
-    wp_enqueue_script( 'boot1','https://code.jquery.com/jquery-3.3.1.slim.min.js', array( 'jquery' ),'',true );
-    wp_enqueue_script( 'boot2','https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js', array( 'jquery' ),'',true );
-    wp_enqueue_script( 'boot3','https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js', array( 'jquery' ),'',true );
+    wp_enqueue_style('bootstrap-styles', 'https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css');
+    wp_enqueue_script( 'bootstrap-scripts','https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js', array( 'jquery' ), '', true );
 }
-add_action( 'wp_enqueue_scripts', 'enqueue_bootstrap' );
+add_action( 'enqueue_block_assets', 'enqueue_bootstrap' );
 
 
 /**
- * Registers the accordion block (or any others you want to make).
+ * Registers the accordion block (and any others you want to make).
  */
 function register_acf_block_types() {
     acf_register_block_type(array(
