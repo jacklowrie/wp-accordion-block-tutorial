@@ -15,7 +15,7 @@
       </h2>
     </div>
 
-    <div id="collapse-<?php echo get_row_index(); ?>" class="collapse show" aria-labelledby="heading-<?php echo get_row_index(); ?>" data-parent="#accordion">
+    <div id="collapse-<?php echo get_row_index(); ?>" class="collapse" aria-labelledby="heading-<?php echo get_row_index(); ?>" data-parent="#accordion">
       <div class="card-body">
         <?php echo $fold_content; ?>
       </div>
