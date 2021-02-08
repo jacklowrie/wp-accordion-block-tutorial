@@ -29,5 +29,4 @@ function register_acf_block_types() {
         'render_template'   => 'blocks/accordion.php',
     ));
 }
-
 add_action( 'acf/init', 'register_acf_block_types' );
